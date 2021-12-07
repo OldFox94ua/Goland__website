@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>Home page</h1>
+
+    {{ if ne .Name "Bob" }}
+    <span>hello Bob</span>
+    {{ else }}
+    <span>Who are you?</span>
+    {{ end }}
+
+    <ul>
+        {{ range .Hobbies }}
+            <li><b>{{ . }}</b></li>
+        {{ else }}
+            <li><b>No Hobbies(</b></li>
+        {{ end }}
+    </ul>
+
+    <p>Person: {{ .Name }}</p> 
+    <p>Age: {{ .Age }}</p>
+    <p>Money: {{ .Money }}</p>   
+</body>
+</html>
