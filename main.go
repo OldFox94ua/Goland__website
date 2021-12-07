@@ -22,9 +22,8 @@ func (u *User) setNewName(newName string) {
 }
 
 func home_page(w http.ResponseWriter, r *http.Request) {
-	bob := User{"Bob", 25, -50, 4.2, 0.8}
-	bob.setNewName("Alex")
-	fmt.Fprintf(w, bob.getAllInfo())
+	// bob := User{"Bob", 25, -50, 4.2, 0.8}
+	fmt.Fprintf(w, "<b>Main Text</b>")
 }
 
 func contacts_page(w http.ResponseWriter, r *http.Request) {
