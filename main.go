@@ -14,6 +14,10 @@ type User struct {
 	Hobbies               []string
 }
 
+type Post struct {
+	Title, Text, Author string
+}
+
 func (u User) getAllInfo() string {
 	return fmt.Sprintf("User name is: %s. He is %d and"+
 		"he has money: %d", u.Name, u.Age, u.Money)
@@ -31,6 +35,7 @@ func home_page(w http.ResponseWriter, r *http.Request) {
 }
 
 func contacts_page(w http.ResponseWriter, r *http.Request) {
+	tmpl, _ := template.ParseFiles("templates/contact_page.html")
 	fmt.Fprintf(w, "Contacts Page!!")
 }
 
