@@ -31,7 +31,7 @@ func home_page(w http.ResponseWriter, r *http.Request) {
 }
 
 func contacts_page(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Contacts Page!")
+	fmt.Fprintf(w, "Contacts Page!!")
 }
 
 func handleRequest() {
